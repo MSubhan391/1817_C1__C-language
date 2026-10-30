@@ -37,12 +37,12 @@ int main()
     cout << "Exercise 2: Arithmetic Operations" << endl;
 
     // Error 1: Incorrect digit sum
-    int digitSum = 16;
+    int digitSum = 17;
 
     int secondNumber = 4;
 
     // Error 2: Addition used instead of multiplication
-    int product = digitSum + secondNumber;
+    int product = digitSum * secondNumber;
 
     // Error 3: Incorrect operation symbol in output
     cout << digitSum << " * " << secondNumber
