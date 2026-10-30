@@ -3,9 +3,11 @@
 using namespace std;
 void task1();
 void task2();
+void task3();
 int main(){
     task1();
     task2();
+    task3();
 return 0;
 }
 void task1()
@@ -26,7 +28,7 @@ void task1()
     cout << "Sum: " << sum << endl;
 
 }
-void task2(){
+void task2()
 
 {
     // Task 2: Arithmetic Operations
@@ -44,6 +46,22 @@ void task2(){
     cout << digitSum << " * " << secondNumber
          << " = " << product << endl;
 
-
 }
 
+void task3(){
+// Task 3: Multiplication Table
+    cout << "Exercise 3: Multiplication Table" << endl;
+    cout << "Personalization Number is 1817" << endl;
+    int personalizationnumber = 1817;
+
+    // Error 1: Missing +1 in the calculation
+    int N = personalizationnumber % 10;
+
+    // Error 2: Loop starts at 0 instead of 1
+    // Error 3: Loop stops before reaching N
+    for (int i = 0; i < N; i++)
+    {
+        cout << N << " x " << i << " = "
+             << N * i << endl;
+    }
+}
