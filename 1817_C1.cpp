@@ -12,7 +12,7 @@ int main()
     int secondNumber = 7;
 
     // Intentional error: subtraction used instead of addition
-    int sum = firstNumber - secondNumber;
+    int sum = firstNumber + secondNumber;
 
     // Display the values
     cout << "First Number: " << firstNumber << endl;
