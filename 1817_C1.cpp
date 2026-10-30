@@ -1,8 +1,14 @@
 
 #include <iostream>
 using namespace std;
-
-int main()
+void task1();
+void task2();
+int main(){
+    task1();
+    task2();
+return 0;
+}
+void task1()
 {
     // Task 1: Variables and Output
     cout << "Personalization Number: 1817" << endl;
@@ -19,5 +25,30 @@ int main()
     cout << "Second Number: " << secondNumber << endl;
     cout << "Sum: " << sum << endl;
 
+}
+void task2(){
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Task 2: Arithmetic Operations
+    cout << "Exercise 2: Arithmetic Operations" << endl;
+
+    // Error 1: Incorrect digit sum
+    int digitSum = 16;
+
+    int secondNumber = 4;
+
+    // Error 2: Addition used instead of multiplication
+    int product = digitSum + secondNumber;
+
+    // Error 3: Incorrect operation symbol in output
+    cout << digitSum << " * " << secondNumber
+         << " = " << product << endl;
+
     return 0;
+}
+
 }
