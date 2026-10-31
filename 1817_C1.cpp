@@ -1,13 +1,15 @@
 #include <iostream>
 using namespace std;
-void task1();
+void task1(); 
 void task2();
 void task3();
+void task4();
 int main()
 {
-    task1();
-    task2();
-    task3();
+    task1(); //Exercise 1 is performed in task1
+    task2(); //Exercise 2 is performed in task1
+    task3(); //Exercise 3 is performed in task1
+    task4(); //Exercise 4 is performed in task1
 return 0;
 }
 void task1()
@@ -56,4 +58,15 @@ void task3(){
         cout << N << " x " << i << " = "
               << N * i << endl;
     }
+}
+void task4(){
+    
+    cout << "\nExercise 4: If/Else conditions" << endl;
+    int number = 1817;
+    if (number % 2 == 0) {
+        cout << number << " is even" << endl;
+    }
+    else {
+        cout << number << " is odd" << endl;
+    }   
 }
