@@ -5,6 +5,7 @@ void task2(); // Tells the compiler about the function
 void task3(); // Void tells function will not return a value
 void task4(); 
 void task5();
+void task6();
 //All these tasks are function name
 int main()
 {
@@ -13,7 +14,8 @@ int main()
     task3(); //Exercise 3 is performed in this function
     task4(); //Exercise 4 is performed in this function
     task5(); //Exercise 5 is performed in this function
- // These are function call that execute when their functions are called
+    task6(); //Exercise 6 is performed in this function
+    // These are function call that execute when their functions are called
     return 0;
 }
 void task1()
@@ -120,9 +122,16 @@ void task5(){
         break;
     case 12:
         cout << "December" << endl;
-        break; // Erro was Break statement missed
+        break; // Error was Break statement missed
     default:
         cout << "Invalid month entered" << endl;
     }
-
 }
+
+void task6(){
+
+    cout << "\nExercisr6: Arrays" << endl;
+    int number[5] = { 12,25,7,40,55 };
+    cout << "Third Number is = " << number[2] << endl; 
+// I placed number '7' at third whoch satisfies both of our requirements
+} 
