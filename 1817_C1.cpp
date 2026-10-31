@@ -6,6 +6,9 @@ void task3(); // Void tells function will not return a value
 void task4(); 
 void task5();
 void task6();
+void task7();
+void showwelcome(string name, int marks); // Helper function in task7
+
 //All these tasks are function name
 int main()
 {
@@ -15,6 +18,7 @@ int main()
     task4(); //Exercise 4 is performed in this function
     task5(); //Exercise 5 is performed in this function
     task6(); //Exercise 6 is performed in this function
+    task7(); //Exercise 7 is performed in this function
     // These are function call that execute when their functions are called
     return 0;
 }
@@ -135,3 +139,18 @@ void task6(){
     cout << "Third Number is = " << number[2] << endl; 
 // I placed number '7' at third whoch satisfies both of our requirements
 } 
+
+void task7(){
+
+        cout << "\nExercise 7: Functions and Parameters" << endl;
+
+    string studentName = "Student";
+    int studentMarks = 17;
+
+}
+
+void showwelcome(string name, int marks) // receives "Student" and 17
+{
+    cout << "Welcome, " << name << "!" << endl;
+    cout << "Your marks are: " << marks << endl;
+}
