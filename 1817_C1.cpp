@@ -4,12 +4,14 @@ void task1();
 void task2();
 void task3();
 void task4();
+void task5();
 int main()
 {
     task1(); //Exercise 1 is performed in task1
-    task2(); //Exercise 2 is performed in task1
-    task3(); //Exercise 3 is performed in task1
-    task4(); //Exercise 4 is performed in task1
+    task2(); //Exercise 2 is performed in task2
+    task3(); //Exercise 3 is performed in task3
+    task4(); //Exercise 4 is performed in task4
+    task5(); //Exercise 5 is performed in task5
 return 0;
 }
 void task1()
@@ -69,4 +71,56 @@ void task4(){
     else {
         cout << number << " is odd" << endl;
     }   
+}
+void task5(){
+        
+    cout << "Exercise 5: Switch Statements" << endl;
+
+    int personalizationnumber = 1817;
+    int month = personalizationnumber % 12;
+
+    cout << "Month is " << month << endl;
+
+    switch (month)
+    {
+    case 1:
+        cout << "January" << endl;
+        break;
+    case 2:
+        cout << "February" << endl;
+        break;
+    case 3:
+        cout << "March" << endl;
+        break;
+    case 4:
+        cout << "April" << endl;
+        break;
+    case 5:
+        cout << "June" << endl;
+        break;
+    case 6:
+        cout << "June" << endl;
+        break;
+    case 7:
+        cout << "July" << endl;
+        break;
+    case 8:
+        cout << "August" << endl;
+        break;
+    case 9:
+        cout << "September" << endl;
+        break;
+    case 10:
+        cout << "October" << endl;
+        break;
+    case 11:
+        cout << "November" << endl;
+        break;
+    case 12:
+        cout << "December" << endl;
+        
+    default:
+        cout << "Invalid month entered" << endl;
+    }
+
 }
