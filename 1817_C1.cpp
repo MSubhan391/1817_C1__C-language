@@ -1,18 +1,20 @@
 #include <iostream>
 using namespace std;
-void task1(); 
-void task2();
-void task3();
-void task4();
+void task1(); // These are function definition or function prototype
+void task2(); // Tells the compiler about the function
+void task3(); // Void tells function will not return a value
+void task4(); 
 void task5();
+//All these tasks are function name
 int main()
 {
-    task1(); //Exercise 1 is performed in task1
-    task2(); //Exercise 2 is performed in task2
-    task3(); //Exercise 3 is performed in task3
-    task4(); //Exercise 4 is performed in task4
-    task5(); //Exercise 5 is performed in task5
-return 0;
+    task1(); //Exercise 1 is performed in this function
+    task2(); //Exercise 2 is performed in this function
+    task3(); //Exercise 3 is performed in this function
+    task4(); //Exercise 4 is performed in this function
+    task5(); //Exercise 5 is performed in this function
+ // These are function call that execute when their functions are called
+    return 0;
 }
 void task1()
 {
@@ -37,7 +39,7 @@ void task2()
     cout << "Exercise 2: Arithmetic Operations" << endl;
 
     // Error 1: Incorrect digit sum
-    int digitSum = 17;
+    int digitSum = 17; // Error was digitsum was 16 and corrected to 17
 
     int secondNumber = 4;
 
@@ -53,9 +55,9 @@ void task3(){
     cout << "Personalization Number is 1817" << endl;
     int personalizationnumber = 1817;
 
-     int N = (personalizationnumber % 10)+1 ;
+     int N = (personalizationnumber % 10)+1 ; //Error was Incorrect calculation
 
-    for (int i = 1; i <= N; i++)
+    for (int i = 1; i <= N; i++) // Error was loop starts at 0
     {
         cout << N << " x " << i << " = "
               << N * i << endl;
@@ -77,7 +79,7 @@ void task5(){
     cout << "Exercise 5: Switch Statements" << endl;
 
     int personalizationnumber = 1817;
-    int month = personalizationnumber % 12;
+    int month = (personalizationnumber % 12)+1; //Error was Incorrect calculation
 
     cout << "Month is " << month << endl;
 
@@ -96,7 +98,7 @@ void task5(){
         cout << "April" << endl;
         break;
     case 5:
-        cout << "June" << endl;
+        cout << "May" << endl; // Error was Wrong month entered
         break;
     case 6:
         cout << "June" << endl;
@@ -118,7 +120,7 @@ void task5(){
         break;
     case 12:
         cout << "December" << endl;
-        
+        break; // Erro was Break statement missed
     default:
         cout << "Invalid month entered" << endl;
     }
