@@ -146,7 +146,8 @@ void task7(){
 
     string studentName = "Student";
     int studentMarks = 17;
-
+    showwelcome(studentName, studentMarks); // Error was Function was declared and defined,
+    // but it was never called inside main()
 }
 
 void showwelcome(string name, int marks) // receives "Student" and 17
