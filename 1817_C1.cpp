@@ -8,7 +8,8 @@ void task5();
 void task6();
 void task7();
 void showwelcome(string name, int marks); // Helper function in task7
-
+void task8();
+void showcallcount(); // Helper variable in task 8
 //All these tasks are function name
 int main()
 {
@@ -19,6 +20,7 @@ int main()
     task5(); //Exercise 5 is performed in this function
     task6(); //Exercise 6 is performed in this function
     task7(); //Exercise 7 is performed in this function
+    task8(); //Exercise 8 is performed in this function
     // These are function call that execute when their functions are called
     return 0;
 }
@@ -154,4 +156,23 @@ void showwelcome(string name, int marks) // receives "Student" and 17
 {
     cout << "Welcome, " << name << "!" << endl;
     cout << "Your marks are: " << marks << endl;
+}
+
+void task8(){
+
+        cout << "Task 8: Function Call Counter" << endl;
+
+    for (int i = 1; i < 5; i++)
+    {
+        showcallcount();
+    }
+}
+
+void showcallcount()
+{
+    int callcount = 0;
+
+    callcount++;
+    cout << "Personalization number is 1817" <<endl;
+    cout << "function callcount is: " << callcount << endl;
 }
