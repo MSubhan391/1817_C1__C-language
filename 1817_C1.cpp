@@ -136,7 +136,7 @@ void task5(){
 
 void task6(){
 
-    cout << "\nExercisr6: Arrays" << endl;
+    cout << "\nExercise 6: Arrays" << endl;
     int number[5] = { 12,25,7,40,55 };
     cout << "Third Number is = " << number[2] << endl; 
 // I placed number '7' at third whoch satisfies both of our requirements
@@ -160,9 +160,9 @@ void showwelcome(string name, int marks) // receives "Student" and 17
 
 void task8(){
 
-        cout << "Task 8: Function Call Counter" << endl;
+        cout << "Exercise 8: static Local Variable" << endl;
 
-    for (int i = 1; i < 5; i++)
+    for (int i = 1; i <= 5; i++) // Error1: Loop only run 4 times instead of 5
     {
         showcallcount();
     }
@@ -170,7 +170,7 @@ void task8(){
 
 void showcallcount()
 {
-    int callcount = 0;
+    static int callcount = 0; // Error 2; variable was no static, so it resets on every call
 
     callcount++;
     cout << "Personalization number is 1817" <<endl;
