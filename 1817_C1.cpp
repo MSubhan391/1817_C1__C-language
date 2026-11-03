@@ -193,9 +193,9 @@ void task10(){
 
 void showVariableValues()
 {
-    static int staticCount = 0;
+    static int staticCount = 1817; // Mistakenly writen o instead of personalization number
 
-    GlobalCount--;
+    GlobalCount++; // Instead od incrementing, I decrement
     staticCount++;
 
     // Display both variable values.
