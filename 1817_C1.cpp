@@ -186,12 +186,12 @@ void task10(){
 
     // Call the function three times to demonstrate
     // how global and static variables retain their values.
-    showVariableValues();
-    showVariableValues();
-    showVariableValues();
+    showVariableValue();
+    showVariableValue();
+    showVariableValue();
 }
 
-void showVariableValues()
+void showVariableValue()
 {
     static int staticCount = 1817; // Mistakenly writen o instead of personalization number
 
