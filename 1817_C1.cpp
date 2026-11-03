@@ -10,6 +10,9 @@ void task7();
 void showwelcome(string name, int marks); // Helper function in task7
 void task8();
 void showcallcount(); // Helper variable in task 8
+void task10();
+void showVariableValue();
+int GlobalCount=1817;
 //All these tasks are function name
 int main()
 {
@@ -21,6 +24,8 @@ int main()
     task6(); //Exercise 6 is performed in this function
     task7(); //Exercise 7 is performed in this function
     task8(); //Exercise 8 is performed in this function
+    task10();
+    showVariableValue();
     // These are function call that execute when their functions are called
     return 0;
 }
@@ -175,4 +180,26 @@ void showcallcount()
     callcount++;
     cout << "Personalization number is 1817" <<endl;
     cout << "function callcount is: " << callcount << endl;
+}
+void task10(){
+        cout << "\nExercise 10: Global vs Static Variables" << endl;
+
+    // Call the function three times to demonstrate
+    // how global and static variables retain their values.
+    showVariableValues();
+    showVariableValues();
+    showVariableValues();
+}
+
+void showVariableValues()
+{
+    static int staticCount = 0;
+
+    GlobalCount--;
+    staticCount++;
+
+    // Display both variable values.
+    cout << "Global variable value: " << GlobalCount << endl;
+    cout << "Static variable value: " << staticCount << endl;
+    
 }
