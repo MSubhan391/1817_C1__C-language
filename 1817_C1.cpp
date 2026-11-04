@@ -192,7 +192,9 @@ void task9()
     double average = computeAverage();
 
     cout << "Average of valid marks: " << average << endl;
+
 }
+
 double computeAverage()
 {
     int mark;
@@ -205,26 +207,38 @@ double computeAverage()
     {
         cin >> mark;
 
-        // Bug 1: Stops for every negative number, not only -1.
-        if (mark < 0)
+        // Fix 1: Stop only when the sentinel value -1 is entered.
+        if (mark == -1)
         {
             break;
         }
 
-        // Bug 2: Adds the mark before checking whether it is valid.
+        // Fix 2: Ignore other negative marks and continue input.
+        if (mark < 0)
+        {
+            continue;
+        }
+
+        // Fix 3: Add only valid marks to the total.
         total += mark;
 
-        // Bug 3: Counts the mark even if it should be ignored.
+        // Count only valid marks, including zero.
         count++;
     }
 
-    // Bug 4: Does not handle count == 0.
-    // This can cause division by zero.
-    // Bug 5: Integer division loses the decimal part.
-    double average = total / count;
+    // Fix 4: Prevent division by zero if no valid marks were entered.
+    if (count == 0)
+    {
+        return 0.0;
+    }
+
+    // Fix 5: Convert total to double to preserve decimal places.
+    double average = static_cast<double>(total) / count;
 
     return average;
 }
+
+
 void task10()
 {
  showVariableValue();
