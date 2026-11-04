@@ -1,4 +1,5 @@
 #include <iostream>
+#include<string>
 using namespace std;
 void task1(); // These are function definition or function prototype
 void task2(); // Tells the compiler about the function
@@ -10,9 +11,12 @@ void task7();
 void showwelcome(string name, int marks); // Helper function in task7
 void task8();
 void showcallcount(); // Helper variable in task 8
+void task9();
+double computeAverage(); // Helper function for task 9
 void task10();
-void showVariableValue();
-int GlobalCount=1817;
+void showVariableValue(); 
+// These tell the compiler about the function in advance
+int GlobalCount=1817; 
 //All these tasks are function name
 int main()
 {
@@ -24,8 +28,8 @@ int main()
     task6(); //Exercise 6 is performed in this function
     task7(); //Exercise 7 is performed in this function
     task8(); //Exercise 8 is performed in this function
-    task10();
-    showVariableValue();
+    task9(); //Exercise 9 is performed in this function
+    task10(); //Exercise 10 is performed in this function
     // These are function call that execute when their functions are called
     return 0;
 }
@@ -68,7 +72,7 @@ void task3(){
     cout << "Personalization Number is 1817" << endl;
     int personalizationnumber = 1817;
 
-     int N = (personalizationnumber % 10)+1 ; //Error was Incorrect calculation
+    int N = (personalizationnumber % 10)+1 ; //Error was Incorrect calculation
 
     for (int i = 1; i <= N; i++) // Error was loop starts at 0
     {
@@ -181,6 +185,46 @@ void showcallcount()
     cout << "Personalization number is 1817" <<endl;
     cout << "function callcount is: " << callcount << endl;
 }
+void task9()
+{
+    cout << "\nExercise 9: Debugging and Average" << endl;
+
+    double average = computeAverage();
+
+    cout << "Average of valid marks: " << average << endl;
+}
+double computeAverage()
+{
+    int mark;
+    int total = 0;
+    int count = 0;
+
+    cout << "Enter marks. Enter -1 to stop." << endl;
+
+    while (true)
+    {
+        cin >> mark;
+
+        // Bug 1: Stops for every negative number, not only -1.
+        if (mark < 0)
+        {
+            break;
+        }
+
+        // Bug 2: Adds the mark before checking whether it is valid.
+        total += mark;
+
+        // Bug 3: Counts the mark even if it should be ignored.
+        count++;
+    }
+
+    // Bug 4: Does not handle count == 0.
+    // This can cause division by zero.
+    // Bug 5: Integer division loses the decimal part.
+    double average = total / count;
+
+    return average;
+}
 void task10(){
         cout << "\nExercise 10: Global vs Static Variables" << endl;
 
@@ -191,7 +235,8 @@ void task10(){
     showVariableValue();
 }
 
-void showVariableValue()
+  
+   void showVariableValue()
 {
     static int staticCount = 1817; // Mistakenly writen o instead of personalization number
 
