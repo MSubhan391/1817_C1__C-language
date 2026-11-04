@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 #include<string>
 using namespace std;
 void task1(); // These are function definition or function prototype
@@ -16,7 +16,7 @@ double computeAverage(); // Helper function for task 9
 void task10();
 void showVariableValue(); 
 // These tell the compiler about the function in advance
-int GlobalCount=1817; 
+int GlobalCount=1817; // Global variable used in task 10
 //All these tasks are function name
 int main()
 {
@@ -225,18 +225,14 @@ double computeAverage()
 
     return average;
 }
-void task10(){
-        cout << "\nExercise 10: Global vs Static Variables" << endl;
-
-    // Call the function three times to demonstrate
-    // how global and static variables retain their values.
-    showVariableValue();
-    showVariableValue();
-    showVariableValue();
+void task10()
+{
+ showVariableValue();
+ showVariableValue();
+ showVariableValue();
 }
-
-  
-   void showVariableValue()
+   
+void showVariableValue()
 {
     static int staticCount = 1817; // Mistakenly writen o instead of personalization number
 
